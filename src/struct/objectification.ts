@@ -1,0 +1,1 @@
+export type Objectification = (text: string) => object

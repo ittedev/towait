@@ -1,0 +1,45 @@
+{
+  "name": "towait",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "dist/node/index.js",
+  "description": "Towait is a two-way template engine.",
+  "keywords": [
+    "template",
+    "template-engine",
+    "two-way",
+    "yaml"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build:node": "tsc",
+    "build:titan": "esbuild ./src/browser/titan.js --bundle --outfile=./dist/browser/titan.js",
+    "build:tiny": "esbuild ./src/browser/tiny.ts --bundle --outfile=./dist/browser/tiny.js",
+    "build:t": "esbuild ./src/browser/t.ts --bundle --outfile=./dist/browser/t.js",
+    "build:y": "esbuild ./src/browser/y.ts --bundle --outfile=./dist/browser/y.js",
+    "compress:titan": "uglifyjs ./dist/browser/titan.js --compress --mangle --output ./dist/browser/titan.min.js",
+    "compress:tiny": "uglifyjs ./dist/browser/tiny.js --compress --mangle --output ./dist/browser/tiny.min.js",
+    "compress:t": "uglifyjs ./dist/browser/t.js --compress --mangle --output ./dist/browser/t.min.js",
+    "compress:y": "uglifyjs ./dist/browser/y.js --compress --mangle --output ./dist/browser/y.min.js",
+    "test": "jest"
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ],
+  "author": "Nakamura",
+  "devDependencies": {
+    "@types/jest": "^26.0.21",
+    "@types/node": "^14.14.35",
+    "esbuild": "^0.11.5",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.4",
+    "tslint": "^6.1.3",
+    "typescript": "^4.1.2",
+    "uglify-js": "^3.13.4"
+  },
+  "dependencies": {}
+}

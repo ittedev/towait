@@ -1,0 +1,6 @@
+::: switch x
+::: case 'First'
+Frist Line
+::: case 'Second'
+Second Line
+::: end

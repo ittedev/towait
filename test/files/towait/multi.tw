@@ -1,0 +1,9 @@
+x: on
+
+--- text
+::: if x
+First Line
+::: end
+
+--- html
+<html>{| x |}</html>

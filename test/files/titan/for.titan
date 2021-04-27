@@ -1,0 +1,3 @@
+::: for v in x
+{| v |} Line
+::: end

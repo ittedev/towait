@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "lib": ["es2020.string", "dom"],
+    "sourceMap": true,
+    "declaration": true,
+    "rootDir": "./src/",
+    "outDir": "./dist/node",
+    "esModuleInterop": true,
+    "strictBindCallApply": true
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

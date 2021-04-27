@@ -1,0 +1,4 @@
+x: 1
+
+--- text
+::: include './test/files/towait/included.tw'

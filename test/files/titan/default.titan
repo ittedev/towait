@@ -1,0 +1,7 @@
+::: switch x
+First Line
+::: case 'Second'
+Second Line
+::: default
+Third Line
+::: end
