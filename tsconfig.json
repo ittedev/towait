@@ -6,7 +6,7 @@
     "sourceMap": true,
     "declaration": true,
     "rootDir": "./src/",
-    "outDir": "./dist/node",
+    "outDir": "./dist/",
     "esModuleInterop": true,
     "strictBindCallApply": true
   },

@@ -1,6 +1,6 @@
 {
   "name": "towait",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "dist/node/index.js",
   "description": "Towait is a two-way template engine.",
@@ -12,19 +12,18 @@
   ],
   "files": [
     "dist",
-    "src",
     "LICENSE"
   ],
   "scripts": {
-    "build:node": "tsc",
-    "build:titan": "esbuild ./src/browser/titan.js --bundle --outfile=./dist/browser/titan.js",
-    "build:tiny": "esbuild ./src/browser/tiny.ts --bundle --outfile=./dist/browser/tiny.js",
-    "build:t": "esbuild ./src/browser/t.ts --bundle --outfile=./dist/browser/t.js",
-    "build:y": "esbuild ./src/browser/y.ts --bundle --outfile=./dist/browser/y.js",
-    "compress:titan": "uglifyjs ./dist/browser/titan.js --compress --mangle --output ./dist/browser/titan.min.js",
-    "compress:tiny": "uglifyjs ./dist/browser/tiny.js --compress --mangle --output ./dist/browser/tiny.min.js",
-    "compress:t": "uglifyjs ./dist/browser/t.js --compress --mangle --output ./dist/browser/t.min.js",
-    "compress:y": "uglifyjs ./dist/browser/y.js --compress --mangle --output ./dist/browser/y.min.js",
+    "build": "tsc",
+    "build:titan": "esbuild ./src/cdn/titan.js --bundle --outfile=./cdn/titan.js",
+    "build:tiny": "esbuild ./src/cdn/tiny.ts --bundle --outfile=./cdn/tiny.js",
+    "build:t": "esbuild ./src/cdn/t.ts --bundle --outfile=./cdn/t.js",
+    "build:y": "esbuild ./src/cdn/y.ts --bundle --outfile=./cdn/y.js",
+    "compress:titan": "uglifyjs ./cdn/titan.js --compress --mangle --output ./cdn/titan.min.js",
+    "compress:tiny": "uglifyjs ./cdn/tiny.js --compress --mangle --output ./cdn/tiny.min.js",
+    "compress:t": "uglifyjs ./cdn/t.js --compress --mangle --output ./cdn/t.min.js",
+    "compress:y": "uglifyjs ./cdn/y.js --compress --mangle --output ./cdn/y.min.js",
     "test": "jest"
   },
   "browserslist": [

@@ -10,21 +10,25 @@ npm install towait
 
 ## Usage
 
+### JavaScript
+
 ```js
 const { towait } = require('towait')
 
 // custom filter
-towait.let('locate', n => n.toLocaleString())
+towait.let('locale', n => n.toLocaleString())
 
 // Reads data from template and Renders the template with the given data
 const email = towait.readFromFile('template.tw', { user: { name: "Sue", gender: "woman" }, points: 1000})
 ```
 
+### TypeScript
+
 ```ts
 import { towait } from 'towait'
 
 // custom filter
-towait.let('locate', n => n.toLocaleString())
+towait.let('locale', n => n.toLocaleString())
 
 // Reads data from template and Renders the template with the given data
 const email = towait.readFromFile('template.tw', { user: { name: "Sue", gender: "woman" }, points: 1000})
@@ -44,7 +48,7 @@ subject: Welcome to My service
 ::: end
 Welcome to My service, {| honorific |} {| user.name |}!
 
-Bonus Points: <b>{| points |> locate |}</b>
+Bonus Points: <b>{| points |> locale |}</b>
 
 <div>
   ::: import 'signature.tw'
