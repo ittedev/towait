@@ -1,4 +1,3 @@
-import { deserialize, serialize } from 'v8'
 import { Node } from '../struct/node'
 import { Towait } from '../towait'
 import { IL } from '../struct/il'
@@ -26,14 +25,14 @@ export class TowaitTemplate {
     const il = this.il
     if (data) {
       const stack = this.towait.stack.clone()
-      const value = deserialize(serialize(il.data))
+      const value = JSON.parse(JSON.stringify(il.data))
       for (const name in il.named) {
         stack.push(Object.entries(data))
         value[name] = il.named[name][1].evalute(stack)
         stack.pop()
       }
       return value
-    } else return deserialize(serialize(il.data))
+    } else return JSON.parse(JSON.stringify(il.data))
   }
 
   render (data: object): string
